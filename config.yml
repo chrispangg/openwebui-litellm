@@ -18,13 +18,11 @@ model_list:
       litellm_params:
           model: deepseek/deepseek-coder
           api_key: os.environ/DEEPSEEK_API_KEY
-          api_base: https://api.deepseek.com/v1
 
     - model_name: deepseek-chat
       litellm_params:
           model: deepseek/deepseek-chat
           api_key: os.environ/DEEPSEEK_API_KEY
-          api_base: https://api.deepseek.com/v1
 
     - model_name: codestral
       litellm_params:
@@ -45,6 +43,12 @@ model_list:
       litellm_params:
           model: groq/llama-3.1-8b-instant
           api_key: os.environ/GROQ_API_KEY
+
+    - model_name: openrouter-llama-3.1-405b-instruct
+      litellm_params:
+          model: openrouter/meta-llama/llama-3.1-405b-instruct
+          api_key: os.environ/OPENROUTER_API_KEY
+          drop_params: true
 
 general_settings:
     master_key: os.environ/MASTER_KEY
