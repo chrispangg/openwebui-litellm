@@ -12,7 +12,7 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 1. Create a `.env` file in the project root with the following content:
 
     ```ymal
-    MASTER_KEY=your_master_key
+    MASTER_KEY=your_master_key #required
     ANTHROPIC_API_KEY=your_anthropic_api_key
     OPENAI_API_KEY=your_openai_api_key
     DEEPSEEK_API_KEY=your_deepseek_api_key
@@ -22,7 +22,7 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 
     Replace `your_*_api_key` with your actual API keys.
 
-2. Ensure the `config.yml` file is present in the project root. This file configures the available models for LiteLLM.
+2. Ensure the `config.yml` file is present in the project root. This file configures the available models for LiteLLM. Feel free to add more models here!
 
 ## Usage
 
@@ -33,8 +33,8 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
     ```
 
 2. Access the Open WebUI interface at `http://localhost:3000`
-
-3. Use the MASTER_KEY as the API key when prompted in the interface.
+   
+3. Access LiteLLM OpenAPI page at `http://localhost:4000`
 
 ## Services
 
