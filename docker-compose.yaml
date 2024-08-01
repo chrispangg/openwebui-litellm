@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+    openwebui:
+        image: ghcr.io/open-webui/open-webui:main
+        container_name: open-webui
+        ports:
+            - "3000:8080"
+        volumes:
+            - open-webui:/app/backend/data
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        environment:
+            - WEBUI_AUTH=False
+            - OPENAI_API_KEY=${MASTER_KEY}
+            - OPENAI_API_BASE_URL=http://host.docker.internal:4000/v1
+        restart: always
+
+    litellm:
+        image: ghcr.io/berriai/litellm:main-latest
+        container_name: litellm
+        env_file:
+            - .env
+        ports:
+            - "4000:4000"
+        volumes:
+            - ./config.yml:/app/config.yaml
+        command: --config /app/config.yaml --port 4000
+        restart: always
+
+volumes:
+    open-webui:

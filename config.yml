@@ -1,0 +1,50 @@
+model_list:
+    - model_name: claude-3-5-sonnet
+      litellm_params:
+          model: claude-3-5-sonnet-20240620
+          api_key: os.environ/ANTHROPIC_API_KEY
+
+    - model_name: gpt-4o
+      litellm_params:
+          model: gpt-4o
+          api_key: os.environ/OPENAI_API_KEY
+
+    - model_name: gpt-4o-mini
+      litellm_params:
+          model: gpt-4o-mini
+          api_key: os.environ/OPENAI_API_KEY
+
+    - model_name: deepseek-coder
+      litellm_params:
+          model: deepseek/deepseek-coder
+          api_key: os.environ/DEEPSEEK_API_KEY
+          api_base: https://api.deepseek.com/v1
+
+    - model_name: deepseek-chat
+      litellm_params:
+          model: deepseek/deepseek-chat
+          api_key: os.environ/DEEPSEEK_API_KEY
+          api_base: https://api.deepseek.com/v1
+
+    - model_name: codestral
+      litellm_params:
+          model: text-completion-codestral/codestral-latest
+          api_key: os.environ/CODESTRAL_API_KEY
+
+    - model_name: groq-llama-3.1-405b
+      litellm_params:
+          model: groq/llama-3.1-405b-reasoning
+          api_key: os.environ/GROQ_API_KEY
+
+    - model_name: groq-llama-3.1-70b
+      litellm_params:
+          model: groq/llama-3.1-70b-versatile
+          api_key: os.environ/GROQ_API_KEY
+
+    - model_name: groq-llama-3.1-8b
+      litellm_params:
+          model: groq/llama-3.1-8b-instant
+          api_key: os.environ/GROQ_API_KEY
+
+general_settings:
+    master_key: os.environ/MASTER_KEY
