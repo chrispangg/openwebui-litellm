@@ -1,60 +1,60 @@
 model_list:
-    - model_name: claude-3-5-sonnet
+    - model_name: Claude 3.5 Sonnet
       litellm_params:
           model: claude-3-5-sonnet-20240620
           api_key: os.environ/ANTHROPIC_API_KEY
 
-    - model_name: gpt-4o
+    - model_name: GPT-4o
       litellm_params:
           model: gpt-4o
           api_key: os.environ/OPENAI_API_KEY
 
-    - model_name: gpt-4o-mini
+    - model_name: GPT-4o mini
       litellm_params:
           model: gpt-4o-mini
           api_key: os.environ/OPENAI_API_KEY
 
-    - model_name: deepseek-coder
-      litellm_params:
-          model: deepseek/deepseek-coder
-          api_key: os.environ/DEEPSEEK_API_KEY
-
-    - model_name: deepseek-chat
-      litellm_params:
-          model: deepseek/deepseek-chat
-          api_key: os.environ/DEEPSEEK_API_KEY
-
-    - model_name: codestral
-      litellm_params:
-          model: text-completion-codestral/codestral-latest
-          api_key: os.environ/CODESTRAL_API_KEY
-
-    - model_name: groq-llama-3.1-405b
-      litellm_params:
-          model: groq/llama-3.1-405b-reasoning
-          api_key: os.environ/GROQ_API_KEY
-
-    - model_name: groq-llama-3.1-70b
-      litellm_params:
-          model: groq/llama-3.1-70b-versatile
-          api_key: os.environ/GROQ_API_KEY
-
-    - model_name: groq-llama-3.1-8b
-      litellm_params:
-          model: groq/llama-3.1-8b-instant
-          api_key: os.environ/GROQ_API_KEY
-
-    - model_name: openrouter-llama-3.1-405b-instruct
+    - model_name: (OpenRouter) Llama 3.1 405B Instruct
       litellm_params:
           model: openrouter/meta-llama/llama-3.1-405b-instruct
           api_key: os.environ/OPENROUTER_API_KEY
           drop_params: true
 
-    - model_name: openrouter-llama-3.1-sonar-large-128k-online
+    - model_name: (OpenRouter) Llama 3.1 Sonar Large Online
       litellm_params:
           model: openrouter/perplexity/llama-3.1-sonar-large-128k-online
           api_key: os.environ/OPENROUTER_API_KEY
           drop_params: true
+
+    - model_name: (Groq) Llama 3.1 70B
+      litellm_params:
+          model: groq/llama-3.1-70b-versatile
+          api_key: os.environ/GROQ_API_KEY
+
+    - model_name: (Groq) Llama 3.1 8B
+      litellm_params:
+          model: groq/llama-3.1-8b-instant
+          api_key: os.environ/GROQ_API_KEY
+
+    - model_name: DeepSeek Coder
+      litellm_params:
+          model: deepseek/deepseek-coder
+          api_key: os.environ/DEEPSEEK_API_KEY
+
+    - model_name: DeepSeek Chat
+      litellm_params:
+          model: deepseek/deepseek-chat
+          api_key: os.environ/DEEPSEEK_API_KEY
+
+    - model_name: Codestral
+      litellm_params:
+          model: text-completion-codestral/codestral-latest
+          api_key: os.environ/CODESTRAL_API_KEY
+
+    # - model_name: (Groq) LLaMA 3.1 405B
+    #   litellm_params:
+    #       model: groq/llama-3.1-405b-reasoning
+    #       api_key: os.environ/GROQ_API_KEY
 
 general_settings:
     master_key: os.environ/MASTER_KEY
