@@ -50,5 +50,11 @@ model_list:
           api_key: os.environ/OPENROUTER_API_KEY
           drop_params: true
 
+    - model_name: openrouter-llama-3.1-sonar-large-128k-online
+      litellm_params:
+          model: openrouter/perplexity/llama-3.1-sonar-large-128k-online
+          api_key: os.environ/OPENROUTER_API_KEY
+          drop_params: true
+
 general_settings:
     master_key: os.environ/MASTER_KEY
