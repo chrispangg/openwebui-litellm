@@ -1,15 +1,15 @@
 model_list:
   - model_name: Claude 3.5 Sonnet
     litellm_params:
-      model: claude-3-5-sonnet-20240620
+      model: claude-3-5-sonnet-20241022
       api_key: os.environ/ANTHROPIC_API_KEY
 
-  - model_name: ChatGPT-4o
+  - model_name: gpt-4o
     litellm_params:
-      model: chatgpt-4o-latest
+      model: gpt-4o
       api_key: os.environ/OPENAI_API_KEY
 
-  - model_name: GPT-4o mini
+  - model_name: gpt-4o-mini
     litellm_params:
       model: gpt-4o-mini
       api_key: os.environ/OPENAI_API_KEY
@@ -51,10 +51,14 @@ model_list:
       model: text-completion-codestral/codestral-latest
       api_key: os.environ/CODESTRAL_API_KEY
 
-  # - model_name: (Groq) LLaMA 3.1 405B
-  #   litellm_params:
-  #       model: groq/llama-3.1-405b-reasoning
-  #       api_key: os.environ/GROQ_API_KEY
-
 general_settings:
   master_key: os.environ/MASTER_KEY
+
+# guardrails:
+#   - guardrail_name: "presidio-pre-guard"
+#     litellm_params:
+#       guardrail: presidio # supported values: "aporia", "bedrock", "lakera", "presidio"
+#       mode: "pre_call"
+#       output_parse_pii: True
+
+litellm_settings:
